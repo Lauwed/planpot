@@ -3,6 +3,7 @@ import "./App.css";
 import DayForm from "./components/DayForm";
 
 import { SubmitHandler, useForm } from "react-hook-form";
+import FormatsForm from "./components/FormatsForm";
 
 type Inputs = {
   example: string;
@@ -25,7 +26,7 @@ function App() {
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     console.log(data, days);
 
-    parent.postMessage({ type: "generate", data }, "*");
+    parent.postMessage({ type: "planpot-generate", data, days }, "*");
   };
 
   const days: { [key: string]: boolean } = {
@@ -44,6 +45,8 @@ function App() {
       className="plugin form"
       onSubmit={handleSubmit(onSubmit)}
     >
+      <FormatsForm register={register} />
+
       <div className="plugin__days">
         {Object.keys(days).map((day) => (
           <DayForm

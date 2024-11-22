@@ -26,6 +26,16 @@
 
   margin-bottom: 50px;
 }
+.plugin__formats {
+  margin-bottom: 20px;
+}
+.plugin__formats h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.plugin__formats h3 {
+  margin-bottom: 10px;
+}
 
 /* FORM */
 .form {
@@ -35,9 +45,16 @@
   display: flex;
   gap: 10px;
 }
+.form__col {
+  flex: 1;
+}
 .form__submit {
   display: block;
-  margin-left: auto;
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 /* DAY COMPONENT */
@@ -51,9 +68,13 @@
 .day__header {
   display: flex;
   justify-content: space-between;
+  padding-right: 20px;
 
   cursor: pointer;
   transition: all 0.3s ease;
+}
+.day__header--open {
+  background-color: var(--db-tertiary);
 }
 .day__header:hover {
   background-color: var(--db-quaternary);
@@ -63,6 +84,9 @@
   user-select: none;
   padding: 20px 10px;
   cursor: pointer;
+
+  font-size: 10px;
+  text-transform: uppercase;
 }
 .day__body {
   margin-bottom: 20px;

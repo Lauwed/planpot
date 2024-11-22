@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { capitalizeString } from "../helpers/strings";
 
 type DayFormProps = {
   day: string;
@@ -16,9 +17,9 @@ const DayForm = ({ day, register, onVisibilityChange }: DayFormProps) => {
 
   return (
     <section className="day">
-      <div className="day__header">
-        <label htmlFor={day} className="day__title">
-          <h2>{day.charAt(0).toUpperCase() + day.slice(1)}</h2>
+      <div className={`day__header ${visible ? "day__header--open" : ""}`}>
+        <label htmlFor={day} className={`day__title`}>
+          <h2>{capitalizeString(day)}</h2>
         </label>
 
         <input
@@ -39,7 +40,7 @@ const DayForm = ({ day, register, onVisibilityChange }: DayFormProps) => {
                 className="input"
                 type="text"
                 id="title"
-                {...register(`${day}-title`)}
+                {...register(`${day}Title`)}
               />
             </div>
             <div className="form-group">
@@ -48,7 +49,7 @@ const DayForm = ({ day, register, onVisibilityChange }: DayFormProps) => {
                 className="input"
                 type="text"
                 id="description"
-                {...register(`${day}-description`)}
+                {...register(`${day}Description`)}
               />
             </div>
           </div>
@@ -60,7 +61,7 @@ const DayForm = ({ day, register, onVisibilityChange }: DayFormProps) => {
                 className="input"
                 type="text"
                 id="begin-hour"
-                {...register(`${day}-begin-hour`, {
+                {...register(`${day}BeginHour`, {
                   required: true,
                 })}
                 required
@@ -72,7 +73,7 @@ const DayForm = ({ day, register, onVisibilityChange }: DayFormProps) => {
                 className="input"
                 type="text"
                 id="end-hour"
-                {...register(`${day}-end-hour`)}
+                {...register(`${day}EndHour`)}
               />
             </div>
           </div>
@@ -83,7 +84,7 @@ const DayForm = ({ day, register, onVisibilityChange }: DayFormProps) => {
               className="input"
               type="file"
               id="image"
-              {...register(`${day}-image`)}
+              {...register(`${day}Image`)}
             />
           </div>
         </div>
