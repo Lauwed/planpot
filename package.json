@@ -14,6 +14,7 @@
     "@penpot/plugin-types": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.53.2",
     "sass": "^1.81.0",
     "vite-live-preview": "^0.3.2"
   },

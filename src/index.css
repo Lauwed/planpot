@@ -23,7 +23,6 @@
 .plugin__days {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 
   margin-bottom: 50px;
 }
@@ -43,8 +42,6 @@
 
 /* DAY COMPONENT */
 .day {
-  padding: 10px 10px 20px;
-
   border-bottom: 1px solid #ccc;
 
   display: flex;
@@ -56,8 +53,17 @@
   justify-content: space-between;
 
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+.day__header:hover {
+  background-color: var(--db-quaternary);
 }
 .day__title {
   flex: 1;
   user-select: none;
+  padding: 20px 10px;
+  cursor: pointer;
+}
+.day__body {
+  margin-bottom: 20px;
 }
