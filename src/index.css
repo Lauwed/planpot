@@ -1,4 +1,4 @@
-@import '@penpot/plugin-styles/styles.css';
+@import "@penpot/plugin-styles/styles.css";
 
 *,
 *::before,
@@ -6,4 +6,58 @@
   box-sizing: border-box;
   margin: 0;
   font-weight: normal;
+}
+
+.form-group, .input {
+  width: 100%;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* PLUGIN */
+.plugin__days {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin-bottom: 50px;
+}
+
+/* FORM */
+.form {
+  margin-top: 20px;
+}
+.form__row {
+  display: flex;
+  gap: 10px;
+}
+.form__submit {
+  display: block;
+  margin-left: auto;
+}
+
+/* DAY COMPONENT */
+.day {
+  padding: 10px 10px 20px;
+
+  border-bottom: 1px solid #ccc;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.day__header {
+  display: flex;
+  justify-content: space-between;
+
+  cursor: pointer;
+}
+.day__title {
+  flex: 1;
+  user-select: none;
 }

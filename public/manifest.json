@@ -1,7 +1,7 @@
 {
-  "name": "React example plugin",
-  "description": "Example plugin with react",
+  "name": "Planpot",
+  "description": "A Penpot plugin to generate plannings",
   "code": "/plugin.js",
   "icon": "/icon.png",
-  "permissions": ["page:read", "content:read", "file:read", "selection:read"]
+  "permissions": ["page:read", "content:read", "file:read", "selection:read", "content:write"]
 }
